@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#121212">
+
+    <EditText
+        android:id="@+id/edtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Problem Title"
+        android:textColor="@color/white"
+        android:background="#D3D3D3"
+        android:layout_marginBottom="16dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Problem Description"
+        android:textColor="@color/white"
+        android:background="#D3D3D3"
+        android:layout_marginBottom="16dp"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/edtDifficulty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Problem Difficulty (e.g. Easy, Medium, Hard)"
+        android:textColor="@color/white"
+        android:background="#D3D3D3"
+        android:layout_marginBottom="16dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edtCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Problem Category"
+        android:textColor="@color/white"
+        android:background="#D3D3D3"
+        android:layout_marginBottom="16dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edtUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Problem URL"
+        android:textColor="@color/white"
+        android:background="#D3D3D3"
+        android:layout_marginBottom="16dp"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnSaveProblem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Problem"
+        android:textColor="#FFFFFF"
+        android:background="#6200EE"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

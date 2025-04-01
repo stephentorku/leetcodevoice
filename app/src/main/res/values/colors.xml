@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme background -->
+    <color name="background_dark">#121212</color>
+
+    <!-- Chip colors -->
+    <color name="chip_background">#424242</color>  <!-- Dark grey chip background -->
+    <color name="chip_text">#FFFFFF</color>       <!-- White chip text -->
+    <color name="black">#121212</color>       <!-- White chip text -->
+    <color name="light_gray">#D3D3D3</color>
+    <color name="dark_gray">#A9A9A9</color>
+
+
+
+    <!-- Difficulty colors (same as LeetCode) -->
+    <color name="difficulty_easy">#4CAF50</color>  <!-- Green -->
+    <color name="difficulty_medium">#FFC107</color> <!-- Amber -->
+    <color name="difficulty_hard">#F44336</color>  <!-- Red -->
+
+    <!-- Accent and text colors -->
+    <color name="color_accent">#FF4081</color>     <!-- Pink accent color -->
+
+
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Custom colors for dark theme -->
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3B3B3</color>
+
+    <color name="button_dark_bg">#444444</color>
+    <color name="button_disabled_bg">#666666</color>
+
+    <color name="edittext_bg">#333333</color> <!-- Dark gray background for EditText -->
+    <color name="button_save_bg">#4CAF50</color> <!-- Green button for Save Problem -->
+
+    <color name="button_start_recording_bg">#4CAF50</color> <!-- Green for Start Recording -->
+    <color name="button_stop_recording_bg">#F44336</color> <!-- Red for Stop Recording -->
+</resources>
