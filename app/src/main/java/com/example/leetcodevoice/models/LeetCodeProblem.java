@@ -82,7 +82,7 @@ public class LeetCodeProblem implements Parcelable {
     public String getDifficulty() { return difficulty; }
     public void setDifficulty(String difficulty) { this.difficulty = difficulty; }
     public String getCategory() { return category; }
-    public void setCategory(String categories) { this.category = category; }
+    public void setCategory(String category) { this.category = category; }
     public String getUrl() { return url; }
     public void setUrl(String url) { this.url = url; }
 }

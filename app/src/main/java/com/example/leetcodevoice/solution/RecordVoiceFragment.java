@@ -1,6 +1,7 @@
 package com.example.leetcodevoice.solution;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.leetcodevoice.LeetCodeActivity;
 import com.example.leetcodevoice.R;
 import com.example.leetcodevoice.models.UserSolution;
 import com.example.leetcodevoice.service.FireStoreService;
@@ -170,6 +173,8 @@ public class RecordVoiceFragment extends Fragment {
                         });
 
                         Toast.makeText(getActivity(), "Audio uploaded successfully", Toast.LENGTH_SHORT).show();
+                        Intent listPage = new Intent(getContext(), LeetCodeActivity.class);
+                        startActivity(listPage);
                     })
                     .addOnFailureListener(e -> {
                         Log.e("Firebase", "Audio upload failed", e);

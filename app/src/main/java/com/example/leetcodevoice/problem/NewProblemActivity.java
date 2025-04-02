@@ -1,7 +1,10 @@
 package com.example.leetcodevoice.problem;
 
 
+import com.example.leetcodevoice.LeetCodeActivity;
 import com.example.leetcodevoice.R;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -53,7 +56,6 @@ public class NewProblemActivity extends AppCompatActivity {
             @Override
             public void onCallback(String docId) {
                 Toast.makeText(NewProblemActivity.this, "Problem saved successfully!", Toast.LENGTH_SHORT).show();
-                clearInputFields();
             }
 
             @Override
@@ -61,13 +63,9 @@ public class NewProblemActivity extends AppCompatActivity {
                 Toast.makeText(NewProblemActivity.this, "Error saving problem", Toast.LENGTH_SHORT).show();
             }
         });
+
+        Intent listPage = new Intent(this, LeetCodeActivity.class);
+        startActivity(listPage);
     }
 
-    private void clearInputFields() {
-        edtTitle.setText("");
-        edtDescription.setText("");
-        edtDifficulty.setText("");
-        edtCategory.setText("");
-        edtUrl.setText("");
-    }
 }

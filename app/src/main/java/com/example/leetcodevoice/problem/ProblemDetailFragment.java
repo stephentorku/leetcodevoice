@@ -1,5 +1,7 @@
 package com.example.leetcodevoice.problem;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,8 @@ import android.widget.TextView;
 import com.example.leetcodevoice.R;
 import com.example.leetcodevoice.models.LeetCodeProblem;
 import com.example.leetcodevoice.solution.UserSolutionFragment;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,11 +41,25 @@ public class ProblemDetailFragment extends Fragment {
             TextView descriptionTextView = view.findViewById(R.id.tv_problem_description);
             TextView difficultyTextView = view.findViewById(R.id.tv_difficulty_level);
             TextView categoryTextView = view.findViewById(R.id.tv_problem_category);
+            TextView urlTextView = view.findViewById(R.id.tv_problem_url);
 
-            titleTextView.setText(problem.getTitle());
-            descriptionTextView.setText(problem.getDescription());
-            difficultyTextView.setText(problem.getDifficulty());
-            categoryTextView.setText(problem.getCategory());
+            String title = "Title: " +problem.getTitle();
+            titleTextView.setText(title);
+
+            String description = "Description: " +problem.getDescription();
+            descriptionTextView.setText(description);
+
+            String difficulty = "Difficulty: " +problem.getDifficulty();
+            difficultyTextView.setText(difficulty);
+
+            String category = "Category: " + problem.getCategory();
+            categoryTextView.setText(category);
+
+            String url = "External URL: " +problem.getUrl();
+            urlTextView.setText(url);
+
+            urlTextView.setOnClickListener(v -> getExternalWebsite(view));
+
 
             if (problem.getDifficulty().equalsIgnoreCase("easy")) {
                 difficultyTextView.setBackgroundResource(R.color.chip_background);
@@ -67,5 +85,11 @@ public class ProblemDetailFragment extends Fragment {
                 .beginTransaction()
                 .replace(R.id.solution_fragment_container, solutionFragment)
                 .commit();
+    }
+
+    private void getExternalWebsite(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(problem.getUrl()));
+        startActivity(intent);
+
     }
 }

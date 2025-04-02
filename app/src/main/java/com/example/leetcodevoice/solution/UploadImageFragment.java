@@ -1,5 +1,6 @@
 package com.example.leetcodevoice.solution;
 
+import com.example.leetcodevoice.LeetCodeActivity;
 import com.example.leetcodevoice.R;
 
 import android.Manifest;
@@ -121,6 +122,8 @@ public class UploadImageFragment extends Fragment {
                                     solutionRef.update("imageUrl", downloadUrl)
                                             .addOnSuccessListener(aVoid -> Log.d("Firestore", "Image URL updated successfully"))
                                             .addOnFailureListener(e -> Log.e("Firestore", "Failed to update image URL", e));
+                                    Intent listPage = new Intent(getContext(), LeetCodeActivity.class);
+                                    startActivity(listPage);
                                 }
                             });
                 } else {
@@ -129,6 +132,8 @@ public class UploadImageFragment extends Fragment {
                         @Override
                         public void onCallback(String solutionId) {
                             Log.d("Firestore", "New solution created with ID: " + solutionId);
+                            Intent listPage = new Intent(getContext(), LeetCodeActivity.class);
+                            startActivity(listPage);
                         }
 
                         @Override

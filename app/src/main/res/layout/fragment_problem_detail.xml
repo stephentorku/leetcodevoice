@@ -55,15 +55,26 @@
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:background="#555555"
-                android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white"/>
 
                 <TextView
                     android:id="@+id/tv_problem_category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:textSize="12sp"
-                    android:textColor="@android:color/darker_gray"/>
+                    android:textColor="@android:color/white"/>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_problem_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:autoLink="web"
+                android:textStyle="bold"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
